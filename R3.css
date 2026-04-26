@@ -1,0 +1,939 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+
+*{
+    font-family: "BDO ", sans-serif;
+}
+
+body{
+    padding-top: 80px;
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    background-color: white;
+}
+
+.navigation{
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+   width: 100%;
+    padding: 10px 0px;
+    background: white !important;
+}
+
+.logo img{
+    width: 35px;
+}
+
+ #menu{
+    width: 35px;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+}
+
+#menu:hover{
+ transform: scale(1.2);
+}
+.navlink {
+     justify-self: center;
+     display: flex;  
+     flex-wrap: wrap;
+     gap: 25px;
+
+}
+
+.nav-wrapper{
+    display: flex;
+    justify-self: center;
+    gap: 50px;
+}
+
+.navlink a{
+ text-decoration: none;   
+ color: black;
+ font-size: 1.2rem;
+ margin: 0 15px;
+ position: relative;
+ font-family:"BDO", sans-serif;
+}
+
+.navlink a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #3DBE34;
+  transition: width 0.3s ease;
+}
+
+.navlink a:hover::after {
+  width: 100%;
+}
+
+.navcontainer{
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.profile{
+    display: flex;
+    gap: 20px;
+    
+
+}
+
+.profile a{
+    text-decoration: none;
+   color: black;
+   font-family:"BDO", sans-serif;
+}
+
+.profile a:hover{
+    color: #2EAB5C;
+}
+.profile button{
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: black;
+    padding: 10px 17px;
+    margin-top: -0.7rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.profile button:hover{
+     transform: scale(1.1);
+}
+
+.hero{
+  margin: 6rem 0 4rem;
+  width: 100%;
+}
+
+
+.hero-content h1{
+    margin: 0 auto;
+   font-size: 3rem;
+   font-family: Playfair Display;
+   font-weight: 400;
+   max-width: 600px;
+   line-height: 1.3;
+   justify-self: center;
+}
+
+.hero-content h3{
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.wrapper{
+    position: relative;
+    display: inline-block;
+}
+
+.wrapper img{
+    position: absolute;
+    left: -15px;
+    top: -5px;
+}
+
+
+.hero button{
+     color: white;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: black;
+    padding: 12px 17px;
+    margin-top: -0.7rem;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    font-size: 1rem;
+    margin: 2rem auto;
+    transition: 0.2s;
+}
+
+.hero button:hover{
+    transform: scale(1.1);
+}
+
+.whatwedo{
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+
+}
+
+ #title{
+    background-image: linear-gradient(to left, #21A353 , #3DBE34);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-color: #3DBE34;
+    color: transparent;
+    text-align: center;
+    font-size: 18px;
+}
+
+.whatwedo p{
+    text-align: center;
+     margin: 0 auto;
+     max-width: 570px;
+     line-height: 1.5;
+
+}
+
+.whatwedo #circle{
+    position: absolute;
+    z-index: -1;
+    left: 0%;
+    width:8%;
+}
+
+.box-container{
+    padding-top: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  gap: 60px;
+  margin:30px auto 0;
+  max-width: 1000px;
+  width: 100%;
+}
+
+
+.box{
+    border-radius: 10px;
+    background-image: linear-gradient(to top,  #3dbe34);  
+    display: flex;
+    padding: 15px 10px;
+    color: white;
+    text-align: left;
+    gap: 20px;
+
+}   
+
+
+.box img{
+    background-color: transparent;
+    width: 40px;
+    padding-top: 10px;
+
+}
+
+
+
+.box .title{
+    font-family: "BDO", sans-serif;
+    font-weight: 300;
+}
+.box .content{
+    text-align: left;
+}
+
+#special{
+    grid-column: span 2;
+    justify-self: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+
+/*--ABOUT--*/
+.about{
+    padding: 30px 20px;
+}
+
+.about p{
+    text-align: center;
+    font-family: "Caveat", cursive  ;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+
+
+.wrapper1{
+    position: relative;
+    display: inline-block;
+
+}
+
+
+#changing{
+    z-index: -99;
+}
+
+.arrow{
+    position: absolute;
+    width: 50px;
+}
+
+.arrow1{
+    top: -70px;
+    width: 67px;
+    left: 4%;
+}
+
+.arrow2{
+    top: -90px;
+    width: 80px;
+    left: 35%;
+}
+.arrow3{
+    top: -70px;
+    right: -15% ;
+    width: 70px;
+}
+
+.fade{
+    transition: opacity 0.3s ease-in-out;
+}
+
+/*--MISSION--*/
+.mission{
+     padding: 50px 40px ;
+     position: relative;
+}
+.miss{
+     display: flex;
+    flex-wrap: wrap;
+     gap: 30px;
+     padding: 0 20px;
+     align-items: center;
+}
+
+.mission-text h3{
+   text-decoration: underline solid 3px #3DBE34 ;
+
+}
+
+.mission-text{
+    flex: 1 1 400px;
+}
+.mission-text p{
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.mission-text button{
+    padding: 10px 15px;
+    background-color:#3DBE34;
+    border: none;
+    color: white;
+    transition: 0.2s;
+    border-radius: 12px;
+    cursor: pointer ;
+}
+
+.mission-text button:hover{
+  transform: scale(1.1);
+}
+
+.mission-img {
+  flex: 1 1 400px;
+}
+
+.mission-img img {
+    width: 100%;
+}
+
+.mission #star{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 20%;
+
+}
+
+
+/*-- LOOPCYCLE--*/
+.loop{
+     padding: 80px 20px;
+     text-align: center;
+}
+
+.loopcycle{
+    display: flex;
+    padding-top: 30px;
+    flex-wrap: wrap;
+justify-content: center;
+    align-items: stretch;
+    gap: 70px;
+
+}
+
+.column{
+     display: flex;
+     flex-direction: column;
+     gap: 40px;
+     float: left;
+     text-align: left;
+}
+
+ .item {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  position: relative;
+}
+
+.item img{
+    width: 50px;
+}
+
+.item h3 {
+   float: left;
+}
+
+.text p{
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.text{
+    position: relative;
+    max-width: 200px;
+    float: left;
+}
+
+
+.item::before {
+  content: "";
+  position: absolute;
+  left: 25px;   /* center of the circle */
+  top: 55px;
+  height: 95px;
+  border-left: 2px dashed green;
+}
+
+.item:last-child::before{
+   display: none;
+}
+
+
+/*--HOW-IT-WORKS--*/
+
+.how-it-works{
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+
+
+
+.how-it-works .div{
+   position: relative;
+   display: inline-block;
+   margin: 0 auto;
+}
+
+.how-it-works h3{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.how-it-works p{
+    text-align: center;
+    font-weight: 500;
+}
+
+
+
+.how-it-works #playbtn{
+   background-color: rgba(61, 190, 52, 0.8);
+   width: 60px;
+   height: 60px;
+   border-radius: 30px;
+   position: absolute;
+    top: 48%;
+    left: 48%;
+    cursor: pointer;
+    animation: play 2s infinite ease-in-out;
+}
+
+
+.how-it-works #play{
+    cursor: pointer;
+    width: 25%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.div img{
+
+   position: relative;
+   width: 100%;
+   max-width: 800px;
+   height: auto;
+   border-radius: 20px;
+}
+
+ #circle2{
+    position: absolute;
+    z-index: -99;
+    width: 12%;
+    right: 0%;
+    
+}
+@keyframes play {
+   0%{ transform:scale(1);}
+   50%{transform: scale(1.3);}
+   100%{transform: scale(1);}
+}
+
+
+
+/*-FAQS--*/
+.faqs{
+  padding: 20px 30px;
+}
+
+
+.faqscontainer{
+   padding-top: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  gap: 60px;
+  margin:30px auto 0;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.faqsbox{
+    line-height: 1;
+    padding: 10px 15px;
+    border: 1px #3dbe34 solid;
+    border-radius: 10px;
+    background-color: #fffcfc;
+
+}
+
+.faqsbox h4{
+    text-decoration: underline #21A353 3px;
+}
+
+
+.faqs #group13{
+   margin: -15em -15em;
+}
+
+.faqsbox p{
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 100;
+}
+
+
+/*--FOUNDER--*/
+.founder{
+    padding: 50px 20px;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 950px;
+    height: auto;
+    margin: 20px auto;
+    padding: 15px 20px;
+    color: white;
+    overflow: hidden;
+    border-radius: 20px;
+    gap: 40px;
+    background-color: #3DBE34;
+}
+
+.card.reverse{
+    flex-direction: row-reverse;
+}
+
+.card::before{
+    content: ""; 
+    position: absolute;
+    inset: 8px;
+    border-radius: 15px;
+    background: #18783D;
+    pointer-events: none;
+    
+    
+}
+
+.card>*{
+    position: relative;
+}
+
+.card img{
+    border-radius:50%;
+    width: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+.text{ 
+    flex: 1;
+    
+}
+
+.text h3{
+    margin: 0;
+    font-size: 20px;
+    font-weight: bolder;
+    flex: 1;
+}
+.text h4{
+    font-weight: 300;
+    flex: 1;
+}
+
+.description{
+
+    max-width: 370px;
+    font-size: 15px;
+    line-height: 1.4;
+    font-family: "BDO", sans-serif;
+    font-weight: 200;
+}
+
+ #group13{
+     position: absolute;
+    z-index: -1;
+}
+
+
+/*SIGNUP*/
+.signup{
+    position: relative;
+  margin:40px 40px;
+  background-image: url(images/World_Recycle_Day_Jumoke_Olowokere_003.jpg.webp);
+padding: 20px;
+background-position: 40%;
+background-size: cover;
+overflow: hidden; 
+border-radius: 30px;
+background-repeat: no-repeat;
+}
+
+.signup::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.bg-image{
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  gap: 220px;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+
+.signup h3{
+    margin-bottom: 30px;
+    color: white;
+    line-height: 1.4;
+   font-size: 30px;
+   max-width: 700px;
+}
+
+.signup button{
+    margin: 0 auto;
+     padding: 15px 25px;
+    background-color:#3DBE34;
+    border: none;
+    color: white;
+    font-size: large;
+    border-radius: 24px;
+    cursor: pointer ;
+    transition: 0.2s;
+}
+.signup button:hover{
+    transform: scale(1.1);
+}
+
+.lines{
+    display: flex;
+  align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.line{
+    
+    flex: 1;
+    background-color: #21A353;
+    height: 6px;
+    border-radius: 10px;
+}
+
+.dot{
+     width: 7px;
+    background-color: #21A353;
+    height: 6px;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+
+.main-footer {
+  background-color: #1E7D44;
+  color: white;
+  padding: 60px 40px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap; /* Allows wrapping on mobile */
+}
+
+/* Grouping Logo and Links */
+.footer-content-left {
+  display: flex;
+  gap: 60px; /* Space between Logo and first link column */
+  flex: 1;
+}
+
+.footer-logo {
+  width: 45px;
+  filter: brightness(0) invert(1); /* Makes logo white */
+}
+
+.footer-links-grid {
+  display: flex;
+  gap: 80px; /* Space between columns */
+  text-align: left;
+}
+
+.link-column h3 {
+  font-size: 13px;
+  color: #A5D6A7;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.link-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-column ul li {
+  font-size: 14px;
+  line-height: 2.2;
+  
+}
+
+.link-column a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Newsletter Box Refinement */
+.newsletter-box {
+  background-color: #2EAB5C; /* Brighter green to match screenshot */
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.newsletter-box h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.newsletter-box p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.newsletter-form input {
+  width: 92%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.newsletter-form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: white;
+  color: #1E7D44;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Bottom Section */
+.footer-bottom-section {
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+.footer-legal {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 12px;
+  color: #A5D6A7;
+  margin-top: 20px;
+  
+}
+
+.footer-legal p{
+    margin: 0;
+}
+
+.footer-legal a {
+    padding: 0;
+    margin: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Responsive Fix */
+@media (max-width: 900px) {
+
+}
+
+
+
+@media (min-width:300px) and (max-width: 749px) {
+    .card, .card.reverse {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+        height: fit-content;
+        margin: 0 auto ;
+        gap: 0px;
+        max-width: 400px;
+
+    }
+    .card img{
+        margin: 0 auto;
+    }
+
+
+    
+    .card p {
+        width: 100%; 
+        text-align: center;
+        /* Allows text to fill the card on mobile */
+    }
+   
+    
+}
+
+
+@media (min-width:500px) and (max-width:800px) {
+    .box-container{
+         grid-template-columns: 1fr;
+    }
+
+    #special{
+        grid-column: span 1;
+        max-width: 97%;
+    }
+
+    .faqscontainer{
+        grid-template-columns: 1fr;
+ 
+   }
+   
+}
+
+@media (min-width:300px) and (max-width:800px) {
+    .box{
+        display: flex;
+        flex: 1 1 100%;
+    }
+    .navlink {
+        display: none; /* Usually, you'd implement a hamburger menu here */
+    }
+    .nav-wrapper {
+        gap: 20px;
+    }
+    .logo #r3{
+        display: none;
+    }
+     #menu{
+        display: block;
+    }
+   
+     
+      .footer-content-left {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer-links-grid {
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+    .footer-link {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-grid {
+        justify-items: center;
+    }
+   
+
+    .navcontainer{
+        padding: 20px 10px 10px;
+    }
+
+   .column:first-child .item:last-child::before {
+        display: block;
+        /* You might need to increase height to bridge the gap between columns */
+        
+    }
+
+    .column:last-child .item:last-child::before {
+        display: none;
+    }
+}
+
+   

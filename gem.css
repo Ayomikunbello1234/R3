@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Caveat:wght@400..700&display=swap');
+
+/* --- GENERAL RESET --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Roboto", sans-serif;
+}
+
+body {
+    padding-top: 80px;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGATION --- */
+.navigation {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navcontainer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img { width: 40px; }
+
+.navlink { display: flex; gap: 20px; }
+.navlink a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+.navlink a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #3DBE34;
+    transition: 0.3s;
+}
+
+.navlink a:hover::after { width: 100%; }
+
+.profile { display: flex; align-items: center; gap: 15px; }
+.profile a { text-decoration: none; color: black; }
+.profile button, .btn-black {
+    color: white;
+    border: none;
+    border-radius: 25px;
+    background-color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.profile button:hover, .btn-black:hover { transform: scale(1.05); }
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.hero-main-text {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(30px, 5vw, 50px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #21A353, #3DBE34);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.wrapper { position: relative; display: inline-block; }
+.wrapper img {
+    position: absolute;
+    left: -12px;
+    top: -5px;
+    width: 30px;
+}
+
+.underline-green { text-decoration: underline #3DBE34; }
+
+.hero-sub-text {
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* --- WHAT WE DO --- */
+.whatwedo {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+}
+
+#title {
+    background: linear-gradient(to left, #21A353, #3DBE34);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 20px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.section-description {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.box {
+    background: #3DBE34;
+    border-radius: 15px;
+    display: flex;
+    padding: 25px;
+    color: white;
+    text-align: left;
+    gap: 20px;
+}
+
+.box img { width: 45px; height: 45px; object-fit: contain; }
+
+#circle {
+    position: absolute;
+    top: 50px;
+    left: 10%;
+    z-index: -1;
+    width: 150px;
+}
+
+/* --- ABOUT --- */
+.about { padding: 100px 20px; text-align: center; }
+.about p { font-family: "Caveat", cursive; font-size: clamp(30px, 6vw, 50px); }
+.wrapper1 { position: relative; color: #3DBE34; font-family: "Playfair Display", serif; }
+.arrow { position: absolute; width: 60px; }
+.arrow1 { top: -60px; left: -20px; }
+.arrow2 { top: -80px; left: 40%; }
+.arrow3 { top: -60px; right: -40px; }
+
+/* --- MISSION --- */
+.mission { padding: 80px 20px; position: relative; }
+.miss {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+    align-items: center;
+    gap: 50px;
+}
+
+.mission-text { flex: 1 1 400px; }
+.mission-text h3 { text-decoration: underline #3DBE34 4px; margin-bottom: 20px; }
+.mission-text p { line-height: 1.8; margin-bottom: 20px; }
+.btn-green {
+    background: #3DBE34;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mission-img { flex: 1 1 400px; }
+.mission-img img { width: 100%; border-radius: 20px; }
+
+/* --- LOOP --- */
+.loop { padding: 80px 20px; text-align: center; }
+.loopcycle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.column { text-align: left; display: flex; flex-direction: column; gap: 30px; }
+.item { display: flex; gap: 15px; max-width: 300px; }
+.item img { width: 50px; height: 50px; }
+.bin-illustration { width: 100%; max-width: 350px; }
+
+/* --- HOW IT WORKS --- */
+.how-it-works { padding: 80px 20px; text-align: center; position: relative; }
+.video-container {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.video-container img { width: 100%; border-radius: 20px; }
+#playbtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(61, 190, 52, 0.9);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* --- FOUNDERS --- */
+.founder { padding: 80px 20px; }
+.card {
+    background: #18783D;
+    border-radius: 25px;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.card.reverse { flex-direction: row-reverse; }
+
+/* Inner border effect */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border: 2px dashed rgba(255,255,255,0.2);
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.founder-info { flex: 1; z-index: 1; }
+.founder-title-group h3 { color: #3DBE34; font-size: 1.4rem; }
+.founder-title-group h4 { font-weight: 300; margin-bottom: 15px; }
+
+/* --- SIGNUP & LINES --- */
+.lines { display: flex; align-items: center; padding: 40px 20px; max-width: 1200px; margin: auto; }
+.line { flex: 1; height: 4px; background: #21A353; border-radius: 2px; }
+.dot { width: 10px; height: 10px; background: #21A353; border-radius: 50%; margin: 0 15px; }
+
+.signup {
+    margin: 40px 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    background: url('images/World_Recycle_Day_Jumoke_Olowokere_003.jpg.webp') no-repeat center/cover;
+    height: 400px;
+}
+
+.bg-overlay {
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.bg-overlay h3 { color: white; font-size: 2rem; max-width: 700px; margin-bottom: 30px; }
+
+/* --- FOOTER --- */
+footer { background: #18783D; color: white; padding: 60px 20px 20px; }
+.footer-link {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 30px; flex: 1; }
+.footer-grid h3 { font-size: 14px; text-transform: uppercase; color: #ccc; margin-bottom: 15px; }
+.footer-grid ul { list-style: none; line-height: 2; font-size: 14px; }
+
+.CTA h4 { margin-bottom: 10px; }
+.CTA input { padding: 10px; border-radius: 5px; border: none; width: 100%; margin-bottom: 10px; }
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    .navlink { display: none; } /* Consider adding a mobile menu later */
+    .miss { text-align: center; }
+    .card, .card.reverse { flex-direction: column; text-align: center; padding: 20px; }
+    .loopcycle { flex-direction: column; align-items: center; }
+    .hero-main-text { font-size: 32px; }
+}
