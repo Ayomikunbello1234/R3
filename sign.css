@@ -1,0 +1,375 @@
+* {
+    font-family: "BDO", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-green: #21A353;
+}
+
+body {
+    margin: 2rem;
+}
+
+ #menu{
+    width: 35px;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+}
+#menu:hover{
+    transform: scale(1.2);
+}
+.container {
+    display: flex;
+    gap: 60px;
+    
+    padding: 30px;
+}
+
+.logo {
+    margin: 30px;
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 53%;
+}
+
+.sign-in h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#sign-image {
+    width: 40%;
+    border-radius: 15px;
+    object-fit: cover;
+    
+  
+}
+
+/* Cards & Bars */
+.box-card {
+    display: flex;
+    gap: 20px;
+}
+
+.cards {
+    border: 1.9px solid #302c2c;
+    width: 180px;
+    padding: 20px 7px 5px;
+    border-radius: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cards:hover{
+    background-color:#A2DBB8;
+}
+
+.cards.active-card{
+    background-color: #A2DBB8;
+}
+
+.cards h4, .cards img {
+    margin-bottom: 0.5em;
+}
+
+.cards p {
+    line-height: 1.3;
+}
+
+.bars {
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+    gap: 10px;
+    margin: 30px auto 20px;
+    
+}
+
+.bar {
+    flex: 1;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #E7E7E7;
+    transition: background-color 0.3s ease;
+}
+
+.bar.active {
+    background-color: var(--primary-green);
+}
+
+#section-header {
+    color: var(--primary-green);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Forms & Inputs */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.forms {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+    min-height: 520px;
+}
+
+.form {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    pointer-events: none;
+}
+
+.form.active {
+    position: relative; 
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+}
+
+.form.prev {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: 545;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"] {
+    padding: 12px;
+    border: 2px #E7E7E7 solid;
+    color: #333333; /* Dark readable text */
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Buttons */
+.btn {
+  display:flex;
+  justify-content: space-between;
+}
+
+form button {
+    background-color: var(--primary-green);
+    border: none;
+    width: 120px;
+    padding: 12px 10px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.form1 .next {
+    align-self: flex-end;
+    margin-top: 1rem;
+}
+
+
+/* Form 3 Checkboxes */
+.form3 .materials,
+.form3 .interest {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.form3 h4 {
+    font-size: 1rem;
+    font-weight: 545;
+    margin-bottom: 12px;
+}
+
+.form3 .materials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 20px;
+    width: 100%;
+}
+
+.form3 .interest-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form3 .checked {
+    display: flex;
+    align-items: center;
+    flex-direction: row !important;
+    gap: 10px;
+}
+
+.form3 .checked h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.form3 .checked input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+}
+/*FORM 4*/
+
+.form4 .materials,
+.form4 .interest {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.form4 h4 {
+    font-size: 1rem;
+    font-weight: 545;
+    margin-bottom: 12px;
+}
+
+.form4 .materials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 20px;
+    width: 100%;
+}
+
+.form4 .interest-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form4 .checked {
+    display: flex;
+    align-items: center;
+    flex-direction: row !important;
+    gap: 10px;
+}
+
+.form4 .checked h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.form3 .checked input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+}
+
+.login-ref {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+}
+
+.login-ref h3 {
+    font-weight: 100;
+    color: #ababab;
+}
+
+.login-ref a {
+    color: black;
+    font-weight: 100;
+}
+
+.card2{
+    cursor: pointer;
+}
+
+@media screen and (max-width:1100px){
+    body{
+        background-color:ay;
+        margin: 2rem;
+    }
+    .container{
+        gap: 80px;
+    }
+}
+
+@media screen and (max-width:990px){
+    body{
+        margin: 3rem;
+    }
+    .container{
+        gap: 100px;
+    }
+    #sign-image{
+        display: none;
+    }
+    .sign-in{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:670px){
+    body{
+        
+        margin: 3rem;
+    }
+    #menu{
+        display: block;
+    }
+    #r3{display: none;}
+
+    .box-card{
+    
+        flex-direction: column;
+    }
+    .sign-in{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .cards{
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        width: 460px;
+    }
+
+    .cards .text{
+      text-align: left;
+    }
+
+    .forms{
+      margin: 0;
+      max-width: 700px;
+      
+    }
+}

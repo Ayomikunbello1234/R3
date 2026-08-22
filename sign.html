@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="sign.css">
+    <link rel="icon" href="/images/logo.svg" type="logo/svg">
+</head>
+<body>
+    <img id="menu"  src="images/menu.png" alt="">
+    <div class="logo">
+        <img id="r3" src="images/logo.svg" alt="Logo">
+    </div>
+
+    <div class="container">
+        <div class="sign-in">
+            <h1>Sign Up</h1>
+
+            <div class="box-card">
+                <div class="cards card1 active-card" data-type="organization">
+                    <img src="building-06-svgrepo-com 1.png" alt="">
+                    <div class="text">
+                    <h4>Create Organization</h4>
+                    <p>For companies, hotels and business</p>
+                    </div>
+                </div>
+                <div class="cards card2" data-type="community">
+                    <img src="Group.png" alt="">
+                    <div class="text">
+                    <h4>Create Community</h4>
+                    <p>For residential areas and communities</p>
+                    </div>
+                </div>
+                <div class="cards card3" data-type="workspace"> 
+                    <img src="User.png" alt="">
+                    <div class="text">
+                    <h4>Join Existing Workspace</h4>
+                    <p>For members and viewers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bars">
+                <div class="bar bar1 active"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+                <div class="bar bar4 organization"></div>
+            </div>
+
+
+        <div class="forms">
+
+            <form action="" id="signup-form">
+
+                <div class="card-form organization active-form">
+                    
+                    <!-- STEP 1 -->
+                    <div class="form form1 ">  
+                        <h3 id="section-header">Section 1: Basic Information</h3>
+                        <div class="field">
+                            <label for="company-name">Organization Name</label>
+                            <input type="text" id="company-name" placeholder="Enter your organization name">
+                        </div>
+
+                        <div class="field">
+                            <label for="organization-type">Organization Type</label>
+                            <input type="text" id="organization-type">
+                        </div>
+
+                        <div class="field">
+                            <label for="industry">Industry(optional)</label>
+                            <input type="text" id="industry">
+                        </div>    
+                        <button class="next-btn next" type="button">Next</button>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="form form2">
+                        <h3 id="section-header">Section 2: Contact Person</h3>
+                        <div class="field">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" placeholder="Enter your full name">
+                        </div>
+
+                        <div class="field">
+                            <label for="role">Role</label>
+                            <input type="text" id="role">
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="field">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter your password">
+                        </div>
+
+                        <div class="btn">
+                            <button class="back-btn back" type="button">Back</button>
+                            <button class="next-btn next" type="button">Next</button>
+                        </div>
+                    </div>
+
+
+                    <!-- STEP 3 -->
+                    <div class="form form3">
+                        <h3 id="section-header">Section 3: Location Details</h3>
+                        <div class="field">
+                            <label for="state"> State</label>
+                            <select id="state" style="padding: 10px; border: 2px #E7E7E7 solid; font-size: 16px;">
+                                <option value="">Lagos</option>
+                                <option value="">Imo</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="city">City</label>
+                            <input type="text" id="city" placeholder="Enter your city">
+                        </div>
+
+                        <div class="field">
+                            <label for="address">Full Address</label>
+                            <input type="text" id="address" placeholder="Enter your address">
+                        </div>
+
+                        <div class="field">
+                            <label for="no-of-emp">Number of Employees</label>
+                            <input type="number" id="phone" placeholder="Enter number of employees">
+                        </div>
+
+                        <div class="btn">
+                            <button class="back-btn back" type="button">Back</button>
+                            <button class="next-btn next" type="button">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4 -->
+                    <div class="form form4">
+                        <h3 id="section-header">Section 4: Recycling Needs</h3>
+                        <div class="materials">
+                            <h4>Materials Commonly Generated</h4>
+                            <div class="materials-grid">
+                                <div class="checked">
+                                    <input type="checkbox" id="plastics">
+                                    <h3>Plastics</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="glass">
+                                    <h3>Glass</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="metal">
+                                    <h3>Metal & Cans</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="sachets">
+                                    <h3>Sachets & Soft plastics</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="ewaste">
+                                    <h3>E-waste</h3>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="interest">
+                            <h4>Interested In</h4>
+                            <div class="interest-grid">
+                                <div class="checked">
+                                    <input type="checkbox" id="pickup">
+                                    <h3>Scheduled Pickup</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="reward">
+                                    <h3>Impact tracking dashboard</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="awareness">
+                                    <h3>Recycling rewards</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="csr">
+                                    <h3>CSR partnership</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn">
+                            <button class="back-btn back" type="button">Back</button>
+                            <button id="register" type="submit">Register</button>
+                        </div>  
+                    </div>
+
+                </div>
+                    
+                <div class="card-form community" style="display: none;">
+                        <!-- STEP 1 -->
+                    <div class="form form1 active">  
+                         <h3 id="section-header">Section 1: Community Details</h3>
+                        <div class="field">
+                            <label for="community-name">Community Name</label>
+                            <input type="text" id="company-name" placeholder="Enter your community name">
+                        </div>
+
+                        <div class="field">
+                            <label for="community-type">Community Type</label>
+                            <input type="text" id="community-type">
+                        </div>
+
+                        <div class="field">
+                            <label for="households">Estimated Number of Household</label>
+                            <input type="number" id="households">
+                        </div>
+
+                        <div class="field">
+                            <label for="state">State</label>
+                            <input type="text" id="state" placeholder="Select your state">
+                        </div>
+
+                        <div class="field">
+                            <label for="city">City</label>
+                            <input type="text" id="city" placeholder="Enter your city">
+                        </div>
+
+                        <div class="field">
+                            <label for="address">Address/Landmark</label>
+                            <input type="text" id="address" placeholder="Enter your address">
+                        </div>
+                            
+                        <button class="next-btn next" type="button">Next</button>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="form form2">
+                        <h3 id="section-header">Section 2: Community Representative </h3>
+                        <div class="field">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" placeholder="Enter your full name">
+                        </div>
+
+                        <div class="field">
+                            <label for="role">Position</label>
+                            <input type="text" id="role" placeholder="Enter your role in the community">
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="field">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter your password">
+                        </div>
+
+                        <div class="btn">
+                            <button class="back-btn back" type="button">Back</button>
+                            <button class="next-btn next" type="button">Next</button>
+                        </div>
+                    </div>
+  
+                    
+
+                    <!-- STEP 3 -->
+                    <div class="form form3">
+                        <h3 id="section-header">Section 3: Interest</h3>                        
+                        <div class="materials">
+                            <h4>Materials Commonly Generated</h4>
+                            <div class="materials-grid">
+                                <div class="checked">
+                                    <input type="checkbox" id="plastics">
+                                    <h3>Plastics</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="glass">
+                                    <h3>Glass</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="metal">
+                                    <h3>Metal & Cans</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="sachets">
+                                    <h3>Sachets & Soft plastics</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="ewaste">
+                                    <h3>E-waste</h3>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="interest">
+                            <h4>Interested In</h4>
+                            <div class="interest-grid">
+                                <div class="checked">
+                                    <input type="checkbox" id="pickup">
+                                    <h3>Community pickup program</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="reward">
+                                    <h3>Reward program</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="awareness">
+                                    <h3>Awareness Campaign</h3>
+                                </div>
+                                <div class="checked">
+                                    <input type="checkbox" id="csr">
+                                    <h3>CSR sponsorship support</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn">
+                            <button class="back-btn back" type="button">Back</button>
+                            <button id="register" type="submit">Register</button>
+                        </div>  
+                    </div>
+
+                </div>
+            
+            <div class="card-form workspace" style="display: none;">
+
+                <!-- STEP 2 -->
+                <div class="form">
+                    <div class="field">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+
+                    
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your prefered password">
+                    </div>
+                    
+                    <div class="field">
+                        <label for="accesscode">Workspace Access Code</label>
+                        <input type="text" id="phone" placeholder="Enter the organization or community access code">
+                    </div>
+
+
+                        <button id="register" type="submit">Register</button>
+                </div>  
+            </div>
+
+            </div>
+       
+                
+                </form>
+
+                 <div class="login-ref">
+                <h3>Have an account already?</h3>
+                <a href="#"><h4>Login</h4></a>
+            </div> 
+        
+            </div>
+
+           
+
+        <img id="sign-image" src="Rectangle 129.png" alt="Decoration Image">
+    </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".cards");
+  const forms = document.querySelectorAll(".card-form");
+  const bars = document.querySelectorAll(".bar");
+
+  let activeForm = document.querySelector(".card-form.organization") || forms[0];
+  let currentStep = 0;
+
+  function render(stepIndex) {
+    currentStep = stepIndex;
+    const steps = activeForm.querySelectorAll(".form");
+
+    // 1. Update form step visibility & classes
+    steps.forEach((step, idx) => {
+      step.classList.toggle("active", idx === currentStep);
+      step.classList.toggle("prev", idx < currentStep);
+    });
+
+    // 2. Update progress bars
+    bars.forEach((bar, idx) => {
+      bar.style.display = idx < steps.length ? "block" : "none";
+      bar.classList.toggle("active", idx <= currentStep);
+    });
+  }
+
+  function switchForm(targetClass) {
+    const nextForm = document.querySelector(`.card-form.${targetClass}`);
+    if (!nextForm) return;
+
+    forms.forEach((f) => (f.style.display = "none"));
+    nextForm.style.display = "block";
+    activeForm = nextForm;
+    render(0);
+  }
+
+  // --- Event Delegation ---
+
+  // 1. Card Selection
+  document.addEventListener("click", (e) => {
+    const card = e.target.closest(".cards");
+    if (!card) return;
+
+    e.preventDefault();
+    cards.forEach((c) => c.classList.remove("active-card"));
+    card.classList.add("active-card");
+    switchForm(card.dataset.type);
+  });
+
+  // 2. Next / Back Navigation
+  document.addEventListener("click", (e) => {
+    const nextBtn = e.target.closest(".next-btn");
+    const backBtn = e.target.closest(".back-btn");
+    if (!nextBtn && !backBtn) return;
+
+    e.preventDefault();
+    const totalSteps = activeForm.querySelectorAll(".form").length;
+
+    if (nextBtn && currentStep < totalSteps - 1) {
+      render(currentStep + 1);
+    } else if (backBtn && currentStep > 0) {
+      render(currentStep - 1);
+    }
+  });
+
+  // Initial load
+  if (activeForm) render(0);
+});
+    </script>
+</body>
+</html>

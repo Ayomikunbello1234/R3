@@ -12,6 +12,31 @@ body{
     margin: 0;
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes showimage {
+ 0%{
+    opacity: 0;
+ }   
+
+ 100%{
+    opacity: 1;
+ }
+}
+
+
+
+
+
 header{
     width: 100%;
     background-color: white;
@@ -124,7 +149,33 @@ header{
   width: 100%;
 }
 
+.hero-content{
+    display: flex;
+    justify-content: space-eenly;
+    gap: 50px;
+}
 
+
+
+
+.hero-content #heroimage{
+   background-image: url(images/BOUTEILLES-PLASTIQUES-1-2.jpg);
+   width: 20%;
+   opacity: 0;
+   background-size: cover;
+   border-radius: 10px;
+  animation: showimage 1.2s ease forwards;
+
+}
+
+.hero-content #heroimage2{
+    width: 20%;
+    background-image: url(images/hero\ 2.png);
+    background-size: cover;
+    border-radius: 10px;
+    opacity: 0;
+    animation: showimage 1.2s ease forwards;
+}
 .hero-content h1{
     margin: 0 auto;
    font-size: 3rem;
@@ -172,6 +223,8 @@ header{
     transform: scale(1.1);
 }
 
+/*WHAT WE DO*/
+
 .whatwedo{
   padding: 80px 20px;
   text-align: center;
@@ -197,12 +250,6 @@ header{
 
 }
 
-.whatwedo #circle{
-    position: absolute;
-    z-index: -1;
-    left: 0%;
-    width:8%;
-}
 
 .box-container{
     padding-top: 30px;
@@ -223,8 +270,13 @@ header{
     color: white;
     text-align: left;
     gap: 20px;
+    transition: 0.3s;
 
 }   
+
+.box:hover{
+    transform: scale(1.1);
+}
 
 
 .box img{
@@ -233,8 +285,6 @@ header{
     padding-top: 10px;
 
 }
-
-
 
 .box .title{
     font-family: "BDO", sans-serif;
@@ -343,20 +393,70 @@ header{
   transform: scale(1.1);
 }
 
+.carousel {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel-card {
+    display: flex;
+}
+
 .mission-img {
-  flex: 1 1 400px;
+    min-width: 500px;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 25px;
 }
 
 .mission-img img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
-
 .mission #star{
     position: absolute;
     z-index: -1;
-    left: 0;
-    width: 20%;
+    left: -80px;
+    top: 260px;
+    width: 240px;
 
+    animation: rotatingstar 8s infinite linear;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.carousel-dots .dots {
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.carousel-dots .dots.active {
+    width: 25px;
+    border-radius: 10px;
+    background-color: #21A353;
+}
+
+@keyframes rotatingstar {
+from{
+    transform: rotate(0deg);
+}
+  to {
+    transform:rotate(360deg);
+  }
+
+  
 }
 
 
@@ -532,8 +632,10 @@ justify-content: center;
 }
 
 
-.faqs #group13{
-   margin: -15em -15em;
+.faqs #faqspic{
+    width: 190px;
+    margin-top: -220px;
+    margin-left: -100px;
 }
 
 .faqsbox p{
@@ -562,7 +664,7 @@ justify-content: center;
     max-width: 950px;
     height: auto;
     margin: 20px auto;
-    padding: 15px 20px;
+    padding: 25px 20px;
     color: white;
     overflow: hidden;
     border-radius: 20px;
@@ -590,9 +692,9 @@ justify-content: center;
 }
 
 .card img{
-    border-radius:50%;
-    width: 150px;
-    object-fit: cover;
+    border-radius:90px;
+    width: 140px;
+    object-fit:fill;
     flex-shrink: 0;
 }
 
@@ -839,7 +941,7 @@ background-repeat: no-repeat;
 
 
 
-@media (min-width:300px) and (max-width: 749px) {
+@media (min-width:300px) and (max-width: 940px) {
     .card, .card.reverse {
         flex-direction: column;
         text-align: center;
@@ -853,8 +955,17 @@ background-repeat: no-repeat;
     .card img{
         margin: 0 auto;
     }
-
-
+   
+    #heroimage{
+        display: none;
+    }
+  
+     #heroimage2{
+        display: none;
+     }
+     .mission #star{
+        top: 100px;
+     }
     
     .card p {
         width: 100%; 
@@ -934,6 +1045,28 @@ background-repeat: no-repeat;
     .column:last-child .item:last-child::before {
         display: none;
     }
+
+    #heroimage{
+        display: none;
+    }
+  
+     #heroimage2{
+        display: none;
+     }
+    
 }
 
+
+/*SIGN UP */
+
+.container{display: flex; gap: 90px; padding:30px; }
+.box-card{display: flex; gap: 20px; }
+#sign-image{width: 40%;}
+.sign-in h1{text-align: center;}
+.cards{border: 1.9px solid; width: 180px; padding:20px 7px 5px; border-radius: 18px; justify-content: center; text-align: center;}
+.cards h4, img{margin-bottom: -0.8em;}
+.cards p{line-height: 1.3;}
+.bar{width: 135px;  height: 6px; border-radius: 10px; background-color:#E7E7E7;}
+.bars{display: flex; justify-content: center; gap: 10px; margin-top: 30px;}
+.logo{margin-top:0px;}
    
