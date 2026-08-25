@@ -725,13 +725,13 @@ justify-content: center;
 }
 
 .description{
-
     max-width: 370px;
     font-size: 15px;
     line-height: 1.4;
     font-family: "BDO", sans-serif;
     font-weight: 200;
 }
+
 
  #group13{
      position: absolute;
@@ -943,8 +943,6 @@ background-repeat: no-repeat;
   text-decoration: none;
 }
 
-/* Responsive Fix */
-
 
 /* TABLET */
 @media (max-width: 900px) {
@@ -1024,7 +1022,7 @@ background-repeat: no-repeat;
 
 
 /* PHONE */
-@media (max-width: 500px) {
+@media (max-width: 670px) {
 
     .hero-content {
         padding: 0 15px;
@@ -1038,6 +1036,14 @@ background-repeat: no-repeat;
         padding: 0 10px;
     }
     
+    .about p{
+        font-size: 29px;
+    }
+
+    .wrapper1{
+        font-size: 40px;
+    }
+    
     .hero-content h3 {
         font-size: 1rem;
         line-height: 1.5;
@@ -1045,8 +1051,7 @@ background-repeat: no-repeat;
 
     .carousel {
         width: 100%;
-        max-width: 400px;
-        
+        max-width: 400px;        
     }
 
     .mission-img {
