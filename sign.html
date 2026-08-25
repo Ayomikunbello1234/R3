@@ -60,17 +60,32 @@
                         <h3 id="section-header">Section 1: Basic Information</h3>
                         <div class="field">
                             <label for="company-name">Organization Name</label>
-                            <input type="text" id="company-name" placeholder="Enter your organization name">
+                            <input type="text" id="company-name" placeholder="Enter your organization name" required>
                         </div>
 
                         <div class="field">
-                            <label for="organization-type">Organization Type</label>
-                            <input type="text" id="organization-type">
-                        </div>
+                            <label for="industry">Industry</label>
+                            <select name="industry" id="industry" >
+                                <option value="">Select your Industry</option>
+                                <option value="Manufacturing">Manufacturing</option>
+                                <option value="food-beverage">Food & Beverage</option>
+                                <option value="retail-ecommerce">Retail & E-commerce</option>
+                                <option value="oilandagse ">Oil & Gas</option>
+                                <option value="bank-fin">Banking & Finance</option>
+                                <option value="tech">Technology & ICT</option>
+                                <option value="health">Healthcare</option>
+                                <option value="education">Education</option>
+                                <option value="agric">Agriculture</option>
+                                <option value="Power">Power & Utilites</option>
+                                <option value="hospital">Hospitality & Tourism</option>
+                                <option value="media">Media & Entertainment</option>
+                                <option value="government">Government & Public Sectors</option>
+                                <option value="other">Other</option>
+                            </select>
 
-                        <div class="field">
-                            <label for="industry">Industry(optional)</label>
-                            <input type="text" id="industry">
+                            <input type="text" id="otherindustry" placeholder="Enter your Industry" style="display: none; margin-top: 1rem;">
+
+                    
                         </div>    
                         <button class="next-btn next" type="button">Next</button>
                     </div>
@@ -85,7 +100,7 @@
 
                         <div class="field">
                             <label for="role">Role</label>
-                            <input type="text" id="role">
+                            <input type="text" id="role" placeholder="Enter your Position">
                         </div>
 
                         <div class="field">
@@ -115,15 +130,17 @@
                         <h3 id="section-header">Section 3: Location Details</h3>
                         <div class="field">
                             <label for="state"> State</label>
-                            <select id="state" style="padding: 10px; border: 2px #E7E7E7 solid; font-size: 16px;">
-                                <option value="">Lagos</option>
-                                <option value="">Imo</option>
+                            <select id="organizationstate" >
+                                <option value="">Select your State </option>
+                            
                             </select>
                         </div>
 
-                        <div class="field">
+                        <div class="field" >
                             <label for="city">City</label>
-                            <input type="text" id="city" placeholder="Enter your city">
+                            <select  id="organizationcity" disabled>
+                                <option value="">Select your City</option>
+                            </select>
                         </div>
 
                         <div class="field">
@@ -133,7 +150,7 @@
 
                         <div class="field">
                             <label for="no-of-emp">Number of Employees</label>
-                            <input type="number" id="phone" placeholder="Enter number of employees">
+                            <input type="number" id="phone" placeholder="Enter number of employees" min="1">
                         </div>
 
                         <div class="btn">
@@ -201,8 +218,10 @@
 
                 </div>
                     
+
+                 <!-- COMMUNITY --> 
                 <div class="card-form community" style="display: none;">
-                        <!-- STEP 1 -->
+                       
                     <div class="form form1 active">  
                          <h3 id="section-header">Section 1: Community Details</h3>
                         <div class="field">
@@ -212,22 +231,33 @@
 
                         <div class="field">
                             <label for="community-type">Community Type</label>
-                            <input type="text" id="community-type">
+                            <select id="community-type">
+                                <option value="">Select your Community</option>
+                                <option value="">Street / Neighborhood </option>
+                                <option value="">Estate</option>
+                                <option value="">Market</option>
+                            </select>
+
+                            <input type="text" placeholder="Enter your Community Type" id="othercommunity" style="display: none; margin-top: 1rem;">
                         </div>
 
                         <div class="field">
                             <label for="households">Estimated Number of Household</label>
-                            <input type="number" id="households">
+                            <input type="number" id="households" min="1">
                         </div>
 
                         <div class="field">
                             <label for="state">State</label>
-                            <input type="text" id="state" placeholder="Select your state">
+                            <select id="communitystate" >
+                                <option value="">Choose your State</option> 
+                            </select>
                         </div>
 
                         <div class="field">
                             <label for="city">City</label>
-                            <input type="text" id="city" placeholder="Enter your city">
+                            <select id="communitycity" disabled>
+                                <option value="">Select your City</option>
+                            </select>
                         </div>
 
                         <div class="field">
@@ -352,7 +382,7 @@
                         <label for="password">Password</label>
                         <input type="password" id="password" placeholder="Enter your prefered password">
                     </div>
-                    
+
                     <div class="field">
                         <label for="accesscode">Workspace Access Code</label>
                         <input type="text" id="phone" placeholder="Enter the organization or community access code">
@@ -382,74 +412,8 @@
 
 
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".cards");
-  const forms = document.querySelectorAll(".card-form");
-  const bars = document.querySelectorAll(".bar");
-
-  let activeForm = document.querySelector(".card-form.organization") || forms[0];
-  let currentStep = 0;
-
-  function render(stepIndex) {
-    currentStep = stepIndex;
-    const steps = activeForm.querySelectorAll(".form");
-
-    // 1. Update form step visibility & classes
-    steps.forEach((step, idx) => {
-      step.classList.toggle("active", idx === currentStep);
-      step.classList.toggle("prev", idx < currentStep);
-    });
-
-    // 2. Update progress bars
-    bars.forEach((bar, idx) => {
-      bar.style.display = idx < steps.length ? "block" : "none";
-      bar.classList.toggle("active", idx <= currentStep);
-    });
-  }
-
-  function switchForm(targetClass) {
-    const nextForm = document.querySelector(`.card-form.${targetClass}`);
-    if (!nextForm) return;
-
-    forms.forEach((f) => (f.style.display = "none"));
-    nextForm.style.display = "block";
-    activeForm = nextForm;
-    render(0);
-  }
-
-  // --- Event Delegation ---
-
-  // 1. Card Selection
-  document.addEventListener("click", (e) => {
-    const card = e.target.closest(".cards");
-    if (!card) return;
-
-    e.preventDefault();
-    cards.forEach((c) => c.classList.remove("active-card"));
-    card.classList.add("active-card");
-    switchForm(card.dataset.type);
-  });
-
-  // 2. Next / Back Navigation
-  document.addEventListener("click", (e) => {
-    const nextBtn = e.target.closest(".next-btn");
-    const backBtn = e.target.closest(".back-btn");
-    if (!nextBtn && !backBtn) return;
-
-    e.preventDefault();
-    const totalSteps = activeForm.querySelectorAll(".form").length;
-
-    if (nextBtn && currentStep < totalSteps - 1) {
-      render(currentStep + 1);
-    } else if (backBtn && currentStep > 0) {
-      render(currentStep - 1);
-    }
-  });
-
-  // Initial load
-  if (activeForm) render(0);
-});
+    <script src="sign.js">
+  
     </script>
 </body>
 </html>

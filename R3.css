@@ -151,7 +151,7 @@ header{
 
 .hero-content{
     display: flex;
-    justify-content: space-eenly;
+    justify-content: space-evenly;
     gap: 50px;
 }
 
@@ -160,19 +160,21 @@ header{
 
 .hero-content #heroimage{
    background-image: url(images/BOUTEILLES-PLASTIQUES-1-2.jpg);
-   width: 20%;
+   width: 16%;
    opacity: 0;
    background-size: cover;
+   background-position: 50%;
    border-radius: 10px;
   animation: showimage 1.2s ease forwards;
 
 }
 
 .hero-content #heroimage2{
-    width: 20%;
+    width: 16%;
     background-image: url(images/hero\ 2.png);
     background-size: cover;
     border-radius: 10px;
+    background-position: 50%;
     opacity: 0;
     animation: showimage 1.2s ease forwards;
 }
@@ -202,6 +204,9 @@ header{
     top: -5px;
 }
 
+.hero-text-content{
+    padding: 0 20px;
+}
 
 .hero button{
      color: white;
@@ -239,13 +244,14 @@ header{
     background-color: #3DBE34;
     color: transparent;
     text-align: center;
-    font-size: 18px;
+    font-size: 26px;
 }
 
 .whatwedo p{
     text-align: center;
      margin: 0 auto;
-     max-width: 570px;
+     font-size: 18px;
+     max-width: 650px;
      line-height: 1.5;
 
 }
@@ -257,7 +263,7 @@ header{
   display: grid;
   gap: 60px;
   margin:30px auto 0;
-  max-width: 1000px;
+  max-width: 1100px;
   width: 100%;
 }
 
@@ -266,7 +272,7 @@ header{
     border-radius: 10px;
     background-image: linear-gradient(to top,  #3dbe34);  
     display: flex;
-    padding: 15px 10px;
+    padding: 20px 20px;
     color: white;
     text-align: left;
     gap: 20px;
@@ -276,6 +282,9 @@ header{
 
 .box:hover{
     transform: scale(1.1);
+}
+#content p{
+    margin-top: -10px;
 }
 
 
@@ -292,6 +301,7 @@ header{
 }
 .box .content{
     text-align: left;
+    max-width: 100%;
 }
 
 #special{
@@ -319,9 +329,7 @@ header{
 .wrapper1{
     position: relative;
     display: inline-block;
-
 }
-
 
 #changing{
     z-index: -99;
@@ -394,19 +402,20 @@ header{
 }
 
 .carousel {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
     overflow: hidden;
 }
 
 .carousel-card {
     display: flex;
+    transition: transform 0.5s ease;
 }
 
 .mission-img {
-    min-width: 500px;
-    width: 500px;
-    height: 500px;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     border-radius: 25px;
 }
@@ -935,13 +944,11 @@ background-repeat: no-repeat;
 }
 
 /* Responsive Fix */
+
+
+/* TABLET */
 @media (max-width: 900px) {
 
-}
-
-
-
-@media (min-width:300px) and (max-width: 940px) {
     .card, .card.reverse {
         flex-direction: column;
         text-align: center;
@@ -955,118 +962,96 @@ background-repeat: no-repeat;
     .card img{
         margin: 0 auto;
     }
-   
-    #heroimage{
+    #r3{
         display: none;
     }
-  
-     #heroimage2{
-        display: none;
-     }
-     .mission #star{
-        top: 100px;
-     }
-    
-    .card p {
-        width: 100%; 
-        text-align: center;
-        /* Allows text to fill the card on mobile */
-    }
-   
-    
-}
-
-
-@media (min-width:500px) and (max-width:800px) {
-    .box-container{
-         grid-template-columns: 1fr;
-    }
-
-    #special{
-        grid-column: span 1;
-        max-width: 97%;
-    }
-
-    .faqscontainer{
-        grid-template-columns: 1fr;
- 
-   }
-   
-}
-
-@media (min-width:300px) and (max-width:800px) {
-    .box{
-        display: flex;
-        flex: 1 1 100%;
-    }
-    .navlink {
-        display: none; /* Usually, you'd implement a hamburger menu here */
-    }
-    .nav-wrapper {
-        gap: 20px;
-    }
-    .logo #r3{
-        display: none;
-    }
-     #menu{
-        display: block;
-    }
-   
-     
-      .footer-content-left {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .footer-links-grid {
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-    .footer-link {
+    .hero-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 0 20px;
+        gap: 20px;
     }
 
-    .footer-grid {
-        justify-items: center;
-    }
-   
-
-    .navcontainer{
-        padding: 20px 10px 10px;
+    .hero-content h1 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
     }
 
-   .column:first-child .item:last-child::before {
+    .hero-content h3 {
+        width: 100%;
+    }
+
+    #heroimage,
+    #heroimage2 {
+        display: none;
+    }
+
+    .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    #special {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+
+    .faqscontainer {
+        grid-template-columns: 1fr;
+    }
+
+    .navlink {
+        display: none;
+    }
+
+    #menu {
         display: block;
-        /* You might need to increase height to bridge the gap between columns */
-        
     }
 
-    .column:last-child .item:last-child::before {
-        display: none;
+    .carousel{
+      margin: 0 auto;
     }
 
-    #heroimage{
-        display: none;
+    .footer-content-left {
+        flex-direction: column;
+        gap: 30px;
     }
-  
-     #heroimage2{
-        display: none;
-     }
-    
+
+    .footer-links-grid {
+        gap: 40px;
+        flex-wrap: wrap;
+    }
 }
 
 
-/*SIGN UP */
+/* PHONE */
+@media (max-width: 500px) {
 
-.container{display: flex; gap: 90px; padding:30px; }
-.box-card{display: flex; gap: 20px; }
-#sign-image{width: 40%;}
-.sign-in h1{text-align: center;}
-.cards{border: 1.9px solid; width: 180px; padding:20px 7px 5px; border-radius: 18px; justify-content: center; text-align: center;}
-.cards h4, img{margin-bottom: -0.8em;}
-.cards p{line-height: 1.3;}
-.bar{width: 135px;  height: 6px; border-radius: 10px; background-color:#E7E7E7;}
-.bars{display: flex; justify-content: center; gap: 10px; margin-top: 30px;}
-.logo{margin-top:0px;}
-   
+    .hero-content {
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.8rem, 8vw, 2rem);
+        line-height: 1.15;
+    }
+    .about{
+        padding: 0 10px;
+    }
+    
+    .hero-content h3 {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .carousel {
+        width: 100%;
+        max-width: 400px;
+        
+    }
+
+    .mission-img {
+        min-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+}
