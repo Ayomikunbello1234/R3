@@ -336,6 +336,7 @@ header{
 .about p {
     margin: 0 auto;
     line-height: 1.2;
+    text-align: center;
     
 }
 
@@ -349,7 +350,6 @@ header{
     position: relative;
     display: inline-block;
     color: #3DBE34;
-     margin-left: 10px ;
     font-family: "Playfair Display", serif;
     font-size: clamp(32px, 7vw, 50px);
 }
