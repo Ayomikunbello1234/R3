@@ -2,9 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
+@font-face{
+    font-family: "BDO Grotesk";
+    src: url(font/BDOGrotesk-Regular-BF648a656fd543a.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
 
 *{
-    font-family: "BDO ", sans-serif;
+    font-family: "BDO Grotesk", sans-serif;
+    
 }
 
 body{
@@ -263,43 +270,51 @@ header{
   display: grid;
   gap: 60px;
   margin:30px auto 0;
-  max-width: 1100px;
+  max-width: 1000px;
   width: 100%;
 }
 
 
 .box{
     border-radius: 10px;
-    background-image: linear-gradient(to top,  #3dbe34);  
+    background-color: #3dbe34;  
     display: flex;
-    padding: 20px 20px;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+   padding: 16px;
     color: white;
     text-align: left;
-    gap: 20px;
     transition: 0.3s;
-
+   
 }   
 
 .box:hover{
     transform: scale(1.1);
 }
-#content p{
-    margin-top: -10px;
-}
 
 
 .box img{
     background-color: transparent;
-    width: 40px;
+    width: 50px;
     padding-top: 10px;
+}
 
+.box .content{
+    display:flex ;
+    flex-direction: column;
 }
 
 .box .title{
+    margin: 0;
+    padding: 10px 0;
     font-family: "BDO", sans-serif;
-    font-weight: 300;
+    font-weight: bold;
+    font-size: 22px;
+    float: left;
 }
-.box .content{
+.box .subtitle{
+    font-size: 16px;
     text-align: left;
     max-width: 100%;
 }
@@ -308,29 +323,36 @@ header{
     grid-column: span 2;
     justify-self: center;
     width: 100%;
-    max-width: 450px;
+    max-width: 470px;
 }
 
 
 /*--ABOUT--*/
-.about{
+.about {
     padding: 30px 20px;
+    text-align: center;
 }
 
-.about p{
-    text-align: center;
-    font-family: "Caveat", cursive  ;
-    font-size: 40px;
+.about p {
+    margin: 0 auto;
+    line-height: 1.2;
+    
+}
+
+.wrapper2 {
+    font-family: "Caveat", cursive;
+    font-size: clamp(30px, 6vw, 48px);
     font-weight: 100;
 }
 
-
-
-.wrapper1{
+.wrapper1 {
     position: relative;
     display: inline-block;
+    color: #3DBE34;
+     margin-left: 10px ;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(32px, 7vw, 50px);
 }
-
 #changing{
     z-index: -99;
 }
@@ -369,10 +391,11 @@ header{
 .miss{
      display: flex;
     flex-wrap: wrap;
-     gap: 30px;
+     gap: 144px;
      padding: 0 20px;
      align-items: center;
 }
+
 
 .mission-text h3{
    text-decoration: underline solid 3px #3DBE34 ;
@@ -380,7 +403,7 @@ header{
 }
 
 .mission-text{
-    flex: 1 1 400px;
+    flex: 1 1 200px;
 }
 .mission-text p{
     line-height: 1.8;
@@ -388,12 +411,14 @@ header{
 }
 
 .mission-text button{
-    padding: 10px 15px;
+    padding: 8px 25px;
+    border-radius: 13px;
     background-color:#3DBE34;
     border: none;
     color: white;
     transition: 0.2s;
-    border-radius: 12px;
+   font-size: 15px;
+   font-weight: lighter;
     cursor: pointer ;
 }
 
@@ -502,22 +527,29 @@ justify-content: center;
 
 .item img{
     width: 50px;
+    flex-shrink: 0;
 }
 
-.item h3 {
-   float: left;
+
+.loopcycle .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 250px;
 }
 
-.text p{
+.loopcycle .text p {
     margin: 0;
     padding: 0;
-    float: left;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
 }
 
-.text{
-    position: relative;
-    max-width: 200px;
-    float: left;
+.loopcycle .item h3 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 22px;
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -673,7 +705,7 @@ justify-content: center;
     max-width: 950px;
     height: auto;
     margin: 20px auto;
-    padding: 25px 20px;
+    padding: 25px 40px;
     color: white;
     overflow: hidden;
     border-radius: 20px;
@@ -710,14 +742,16 @@ justify-content: center;
 
 .text{ 
     flex: 1;
+    gap: 0;
     
 }
 
 .text h3{
-    margin: 0;
+    margin-bottom:-20px ;
     font-size: 20px;
     font-weight: bolder;
     flex: 1;
+
 }
 .text h4{
     font-weight: 300;
@@ -1033,16 +1067,21 @@ background-repeat: no-repeat;
         line-height: 1.15;
     }
     .about{
-        padding: 0 10px;
+      padding: 20px;
     }
     
     .about p{
-        font-size: 29px;
+        margin: 0 auto;
+    }
+    
+    .wrapper2{
+        font-size:30px ;
     }
 
     .wrapper1{
         font-size: 40px;
     }
+
     
     .hero-content h3 {
         font-size: 1rem;
@@ -1059,8 +1098,18 @@ background-repeat: no-repeat;
         width: 100%;
         height: 100%;
     }
+    .box-container{
+        gap: 30px;
+    }
 
     #special{
-        max-width: 400px;
+        max-width: 420px;
     }
+
+    .column:first-child .item:last-child::before{
+        display: block;
+    }
+     .column:last-child .item:last-child::before{
+        display: none;
+     }
 }
