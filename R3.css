@@ -1103,7 +1103,7 @@ background-repeat: no-repeat;
     }
 
     #special{
-        max-width: 420px;
+        max-width: 409px;
     }
 
     .column:first-child .item:last-child::before{

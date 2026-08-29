@@ -337,10 +337,10 @@ form button {
 
 @media screen and (max-width:990px){
     body{
-        margin: 3rem;
+        margin: 2rem;
     }
     .container{
-        gap: 100px;
+        gap: 0;
     }
     #sign-image{
         display: none;
@@ -351,39 +351,58 @@ form button {
     }
 }
 
-@media screen and (max-width:610px){
-    body{
-        
-        margin: 3rem;
+
+@media screen and (max-width: 610px) {
+
+    body {
+        margin: 1rem;
     }
-    #menu{
+
+    #menu {
         display: block;
     }
-    #r3{display: none;}
 
-    .box-card{
-    
-        flex-direction: column;
+    #r3 {
+        display: none;
     }
-    .sign-in{
-        margin: 0 auto;
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .box-card {
+        flex-direction: column;
         width: 100%;
     }
-    .cards{
+
+    .sign-in {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .cards {
         display: flex;
+        align-items: center;
         gap: 20px;
-        margin: 0 5rem;
-        padding: 20px;
-        width: 430px;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
     }
 
-    .cards .text{
-      text-align: left;
+    .cards .text {
+        text-align: left;
     }
 
-    .forms{
-      margin: 0;
-      max-width: 700px;
-      
+    .forms {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form3 .materials-grid,
+    .form4 .materials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 }
