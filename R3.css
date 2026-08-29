@@ -322,7 +322,7 @@ header{
 #special{
     grid-column: span 2;
     justify-self: center;
-   
+   width: calc((100% - 60px) / 2);
 }
 
 
@@ -1099,8 +1099,13 @@ background-repeat: no-repeat;
     }
     .box-container{
         gap: 30px;
+         grid-template-columns: 1fr;
     }
 
+    #special {
+        grid-column: span 1;
+       width: 93%;
+    }
     
 
     .column:first-child .item:last-child::before{
