@@ -322,8 +322,7 @@ header{
 #special{
     grid-column: span 2;
     justify-self: center;
-    width: 100%;
-    max-width: 470px;
+   
 }
 
 
@@ -1102,9 +1101,7 @@ background-repeat: no-repeat;
         gap: 30px;
     }
 
-    #special{
-        max-width: 409px;
-    }
+    
 
     .column:first-child .item:last-child::before{
         display: block;
